@@ -1,0 +1,22 @@
+<dom-module id = "prop-element">
+   <template>
+      <button on-click = "onClickFunc">Change value</button>
+   </template>
+   
+   <script>
+      Polymer ({
+         is: "prop-element", properties: {
+            myProp1: {
+               type: String,
+               notify: true,
+               readOnly: true,
+               value: 'This is initial value...'
+            }
+         },
+         onClickFunc: function(){
+            this._setMyProp1('This is new value after clicking the button...');
+            
+         }
+      });
+   </script>
+</dom-module>
